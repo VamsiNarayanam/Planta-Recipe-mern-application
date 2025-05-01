@@ -70,7 +70,7 @@ body {
 
 .app-container {
   
-    background-image: url("/src/images/Restaurant_logo.jpg");
+    background-image: url("images/Restaurant_logo.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -376,3 +376,4 @@ h2 {
     color: white;
     font-size: large;
 }
+
