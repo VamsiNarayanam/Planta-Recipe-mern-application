@@ -35,7 +35,7 @@ const Cart = ({ cart, removeFromCart }) => {
           ))}
         </ul>
       )}
-      
+
       <h3>Total: ₹{total}</h3>
       {cart.length > 0 && (
         <div className="payment-container">

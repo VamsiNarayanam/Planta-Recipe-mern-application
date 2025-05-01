@@ -5,7 +5,7 @@ import axios from "axios";
 const Rating = () => {
   const navigate = useNavigate();
   const [submitted, setSubmitted] = useState(false);
-  const [submittedName, setSubmittedName] = useState(""); 
+  const [submittedName, setSubmittedName] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [review, setReview] = useState("");
@@ -23,7 +23,7 @@ const Rating = () => {
         review
       });
 
-      setSubmittedName(name); 
+      setSubmittedName(name);
       setSubmitted(true);
 
       setTimeout(() => {

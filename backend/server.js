@@ -14,8 +14,8 @@ mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log("MongoDB Connected"))
-.catch((err) => console.error("MongoDB Connection Error:", err));
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("MongoDB Connection Error:", err));
 
 
 const paymentSchema = new mongoose.Schema({
@@ -39,10 +39,10 @@ app.post("/payment", async (req, res) => {
     if (!amount) {
       return res.status(400).json({ error: "Amount is required" });
     }
-    
+
     const newPayment = new Payment({ amount });
     await newPayment.save();
-    
+
     res.status(201).json({ message: "Payment received successfully" });
   } catch (error) {
     console.error("Error processing payment:", error);

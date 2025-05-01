@@ -42,13 +42,13 @@ const Home = ({ addToCart }) => {
       <h2>🌿 PLANTA FEAST MENU 🌿</h2>
       {Object.keys(menu).map((category) => (
         <div key={category}>
-          <br/>
+          <br />
           <h2>{category.toUpperCase()}</h2>
           <ul className="menu-list">
             {menu[category].map((item) => (
               <li key={item.id} className="menu-item">
                 <img src={item.image} alt={item.name} className="menu-image" />
-            <br/>
+                <br />
                 <p>{item.name} - ₹{item.price}</p>
                 <button className="btn" onClick={() => addToCart(item)}>ORDER</button>
               </li>
@@ -56,7 +56,7 @@ const Home = ({ addToCart }) => {
           </ul>
         </div>
       ))}
-      <br/><br/>
+      <br /><br />
       <Link className="link" to="/cart">VIEW SAVED RECIPES</Link>
     </div>
   );

@@ -23,7 +23,9 @@ const AppContent = () => {
   return (
 
     <div className="app-container">
+
       <Navbar cartLength={cart.length} />
+
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
@@ -33,7 +35,7 @@ const AppContent = () => {
         <p>&copy; {new Date().getFullYear()} Planta Feast. All rights reserved.</p>
       </footer>
     </div>
-    
+
   );
 };
 
