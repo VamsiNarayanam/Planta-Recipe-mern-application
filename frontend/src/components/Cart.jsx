@@ -9,10 +9,37 @@ const Cart = ({ cart, removeFromCart }) => {
 
   const handlePayment = async () => {
     try {
-      await axios.post("http://localhost:5000/payment", { amount: total });
 
-      setPaymentSuccess(true);
-      setTimeout(() => navigate("/rating"), 3000);
+      const options = {
+        key: "rzp_test_R4UHun3Y7fdmgD",
+        amount: total * 100,
+        currency: "INR",
+        name: "Recipe store",
+        description: "Payment for Order",
+        handler: async function (response) {
+          console.log("Payment successful", response);
+
+          await axios.post("http://localhost:5000/payment", { amount: total });
+
+          setPaymentSuccess(true);
+          setTimeout(() => navigate("/rating"), 3000);
+        },
+        prefill: {
+          name: "vamsi narayanam",
+          email: "vamikrish.rock@gmail.com",
+          contact: "9582908655",
+        },
+        notes: {
+          address: "dwarka sector-7",
+        },
+        theme: {
+          color: "#F37254",
+        },
+      };
+
+
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
     } catch (error) {
       console.error("Payment Error:", error.response?.data || error.message);
       alert("Payment failed. Try again!");
