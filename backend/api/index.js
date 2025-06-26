@@ -1,3 +1,5 @@
+
+
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
@@ -68,4 +70,5 @@ app.post("/rating", async (req, res) => {
 });
 
 
+module.exports = app
 
