@@ -17,7 +17,7 @@ const Rating = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/rating", {
+      await axios.post("https://planta-recipe-mern-application.vercel.app/rating", {
         name,
         phone,
         review

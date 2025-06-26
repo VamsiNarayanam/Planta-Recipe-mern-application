@@ -19,7 +19,7 @@ const Cart = ({ cart, removeFromCart }) => {
         handler: async function (response) {
           console.log("Payment successful", response);
 
-          await axios.post("http://localhost:5000/payment", { amount: total });
+          await axios.post("https://planta-recipe-mern-application.vercel.app/payment", { amount: total });
 
           setPaymentSuccess(true);
           setTimeout(() => navigate("/rating"), 3000);
