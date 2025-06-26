@@ -70,7 +70,7 @@ body {
 
 .app-container {
   
-    background-image: url("images/Restaurant_logo.jpg");
+    background-image: url("/images/Restaurant_logo.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -175,7 +175,6 @@ h3 {
 }
 
 .cart-container {
-    background-image: url('https://www.usatoday.com/gcdn/-mm-/38aa2eec2c2eb5dd2ee601e47afb788c2e596114/c=0-461-4494-3000/local/-/media/2017/10/18/USATODAY/USATODAY/636439359425397281-RASIKA-Interior-credit-Greg-Powers.jpg?width=1320&height=746&fit=crop&format=pjpg&auto=webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
